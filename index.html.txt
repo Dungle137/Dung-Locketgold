@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungle · Locket Gold (Chủ Trang Web - Miễn Phí 0đ)</title>
+  <style>
+    :root {
+      --bg-cream: #fffdf7;
+      --gold-grad: linear-gradient(180deg, #ffb81c 0%, #f59e0b 100%);
+      --gold-light: #fff7e0;
+      --gold-border: #fde68a;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .phone-frame {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      background: var(--bg-cream);
+      position: relative;
+      padding-bottom: 155px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      overflow-x: hidden;
+    }
+
+    .notice-bar {
+      background: #fef9e7;
+      border-bottom: 1px solid #fdebd0;
+      color: #b45309;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      padding: 9px 12px;
+      line-height: 1.4;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: rgba(255, 253, 247, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .brand-box {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--gold-grad);
+      display: grid;
+      place-items: center;
+      color: #92400e;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .owner-badge {
+      font-size: 10.5px;
+      font-weight: 800;
+      background: #111827;
+      color: #fbbf24;
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+
+    .auth-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .balance-pill {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .btn-sm {
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--gold-grad);
+      color: #111827;
+      border: none;
+    }
+
+    .main-content {
+      padding: 16px 18px 0;
+      text-align: center;
+    }
+
+    .ios-pill {
+      display: inline-block;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      color: #92400e;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 29px;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      color: #f59e0b;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .cta-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-cta {
+      width: 92%;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .cta-gold {
+      background: var(--gold-grad);
+      color: #111827;
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.3);
+    }
+
+    .cta-white {
+      background: #fff;
+      color: var(--text-dark);
+      border: 1.5px solid #fde68a;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .cta-blue {
+      background: #eff6ff;
+      color: #1e3a8a;
+      border: 1px solid #dbeafe;
+      border-radius: 20px;
+      width: 94%;
+    }
+
+    .extra-section {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .extra-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    .spotify-box {
+      background: linear-gradient(135deg, #1db954, #159c44);
+      color: #fff;
+      padding: 15px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .status-log {
+      margin-top: 16px;
+      text-align: left;
+      background: #ffffff;
+      border: 1px solid #fde68a;
+      border-radius: 14px;
+      padding: 11px 12px;
+      font-size: 12px;
+      color: #374151;
+      max-height: 130px;
+      overflow-y: auto;
+      line-height: 1.45;
+    }
+
+    .toast-box {
+      position: fixed;
+      bottom: 132px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92%;
+      max-width: 396px;
+      background: #fff;
+      border: 1px solid #f3f4f6;
+      border-radius: 16px;
+      padding: 11px 14px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 30;
+    }
+
+    .toast-bolt {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fef3c7;
+      color: #f59e0b;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .toast-body {
+      flex: 1;
+      font-size: 12px;
+      color: #374151;
+      line-height: 1.35;
+    }
+
+    .toast-tag {
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin-right: 6px;
+    }
+
+    .toast-close {
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .float-row {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 94%;
+      max-width: 405px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 25;
+      pointer-events: none;
+    }
+
+    .float-pill {
+      pointer-events: auto;
+      border: none;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
+    }
+
+    .pill-wheel {
+      background: linear-gradient(90deg, #d97706, #f59e0b);
+    }
+
+    .pill-zalo {
+      background: #0068ff;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 94%;
+      max-width: 405px;
+      background: #fff;
+      border: 1px solid #f3f4f6;
+      border-radius: 24px;
+      padding: 8px 4px;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+      z-index: 40;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #6b7280;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    .tab-btn.active {
+      color: #111827;
+      font-weight: 700;
+    }
+
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 370px;
+      background: #fff;
+      border-radius: 22px;
+      padding: 22px 18px;
+      text-align: center;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-card input,
+    .modal-card select {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      margin: 8px 0 12px;
+      font-size: 14px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tool-btn {
+      padding: 11px 8px;
+      border-radius: 12px;
+      border: 1px solid #fde68a;
+      background: #fffdf7;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #1f2937;
+    }
+  </style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="notice-bar" id="noticeBar">
+      CHÀO CHỦ WEB DUNGLE: Toàn bộ tính năng đã mở khóa 0đ · Không giới hạn lượt dùng
+    </div>
+
+    <header class="topbar">
+      <a href="#" class="brand" id="brandHome">
+        <div class="brand-box">♥</div>
+        <span class="brand-name">Dungle</span>
+        <span class="owner-badge">OWNER · 0đ</span>
+      </a>
+      <div class="auth-group">
+        <span class="balance-pill" id="balanceDisplay">∞ VNĐ</span>
+        <button class="btn-sm" id="btnOwnerPanel">Quản Trị</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="ios-pill">
+        Chủ sở hữu: <strong>Dungle</strong> · Quyền Admin · Miễn Phí 100% (0đ)
+      </div>
+
+      <h1>Dungle <span>Locket Gold</span></h1>
+      <p class="desc">
+        Quay video dài 30 giây, đăng ảnh riêng tư, thay logo app, mở khoá toàn bộ icon và nền VIP. Tài khoản chủ web <strong>Dungle</strong> sử dụng mọi dịch vụ hoàn toàn <strong>0đ</strong>.
+      </p>
+
+      <div class="cta-list">
+        <button class="btn-cta cta-gold" id="btnOpenGold">👑 Kích Hoạt Gold Ngay (0đ)</button>
+        <button class="btn-cta cta-white" id="btnFrame">🎨 Mở Toàn Bộ Khung VIP (0đ)</button>
+        <button class="btn-cta cta-blue" id="btnVipCard">🪪 Tạo Thẻ Locket VIP · Dungle (0đ)</button>
+      </div>
+
+      <section class="extra-section">
+        <h2 class="extra-title">Dịch Vụ Mở Rộng (Miễn Phí Chủ Web)</h2>
+        <div class="spotify-box" id="btnSpotify">🎵 Kích Hoạt Spotify Premium (0đ)</div>
+      </section>
+
+      <div class="status-log" id="ownerLog">
+        <strong>Nhật ký quyền chủ web Dungle:</strong><br />
+        • Xác nhận chủ sở hữu: <strong>Dungle</strong> (Số dư không giới hạn · Phí 0đ).
+      </div>
+    </main>
+
+    <div class="toast-box" id="toastBox">
+      <div class="toast-bolt">⚡</div>
+      <div class="toast-body">
+        <div>
+          <span class="toast-tag">QUYỀN CHỦ WEB</span>
+          <span id="toastTime" style="color:#9ca3af;">Đang hoạt động</span>
+        </div>
+        <div id="toastMsg" style="margin-top:3px;">
+          Chủ web <strong>Dungle</strong> đã mở khóa toàn bộ tính năng với giá <strong>0đ</strong>
+        </div>
+      </div>
+      <button class="toast-close" id="btnCloseToast" aria-label="Đóng">✕</button>
+    </div>
+
+    <div class="float-row">
+      <button class="float-pill pill-wheel" id="btnWheel">🎡 Vòng Quay Free (0đ)</button>
+      <button class="float-pill pill-zalo" id="btnZalo">💬 Nhóm Chat Zalo</button>
+    </div>
+
+    <nav class="bottom-bar" id="bottomNav">
+      <button class="tab-btn active" data-tab="home">🏠<span>Trang Chủ</span></button>
+      <button class="tab-btn" data-tab="locket">👑<span>Locket</span></button>
+      <button class="tab-btn" data-tab="spotify">🎵<span>Spotify</span></button>
+      <button class="tab-btn" data-tab="shop">🏪<span>Gian Hàng</span></button>
+      <button class="tab-btn" data-tab="frame">🎨<span>Khung</span></button>
+      <button class="tab-btn" data-tab="topup">💳<span>0đ VIP</span></button>
+      <button class="tab-btn" data-tab="me">👤<span>Dungle</span></button>
+    </nav>
+  </div>
+
+  <!-- Modal Kích Hoạt Gold 0đ -->
+  <div class="modal-backdrop" id="goldModal">
+    <div class="modal-card">
+      <h3 style="font-size:19px;font-weight:800;">Kích Hoạt Gold · Dungle (0đ)</h3>
+      <p style="font-size:13px;color:#6b7280;margin-top:6px;">
+        Chủ trang web Dungle kích hoạt miễn phí không cần thanh toán
+      </p>
+      <input type="text" id="usernameInput" placeholder="Nhập @username (mặc định: @dungle)" />
+      <select id="planSelect">
+        <option value="Locket Gold Vĩnh Viễn (0đ)">Locket Gold Vĩnh Viễn — 0đ</option>
+        <option value="Full Icon + Nền VIP (0đ)">Full Icon + Nền VIP — 0đ</option>
+        <option value="Gói Combo Locket + Spotify (0đ)">Combo Locket + Spotify — 0đ</option>
+      </select>
+      <button class="btn-cta cta-gold" style="width:100%;" id="btnConfirmGold">
+        Kích Hoạt Ngay (Miễn Phí 0đ)
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Bảng Điều Khiển Chủ Web Dungle -->
+  <div class="modal-backdrop" id="ownerModal">
+    <div class="modal-card">
+      <h3 style="font-size:19px;font-weight:800;">Bảng Điều Khiển · Dungle</h3>
+      <p style="font-size:12.5px;color:#15803d;font-weight:700;margin-top:4px;">
+        Trạng thái: Chủ Trang Web · Toàn Quyền · 0đ
+      </p>
+
+      <input type="text" id="bannerInput" placeholder="Đổi nội dung thanh thông báo trên cùng..." />
+      <button class="btn-cta cta-white" style="width:100%;padding:10px;font-size:13px;" id="btnSaveBanner">
+        Lưu Thông Báo Mới
+      </button>
+
+      <div class="tool-grid">
+        <button class="tool-btn" id="toolUnlockAll">🔓 Mở Khóa Tất Cả (0đ)</button>
+        <button class="tool-btn" id="toolSpinNow">🎡 Quay Thưởng Free</button>
+        <button class="tool-btn" id="toolFrameVip">🎨 Kích Hoạt Full Khung</button>
+        <button class="tool-btn" id="toolSpotifyVip">🎵 Kích Hoạt Spotify</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const goldModal = document.getElementById("goldModal");
+    const ownerModal = document.getElementById("ownerModal");
+    const usernameInput = document.getElementById("usernameInput");
+    const ownerLog = document.getElementById("ownerLog");
+
+    function addLog(text) {
+      const time = new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" });
+      ownerLog.innerHTML += `<br />• [${time}] ${text}`;
+      ownerLog.scrollTop = ownerLog.scrollHeight;
+    }
+
+    function openGoldModal() {
+      goldModal.classList.add("open");
+      usernameInput.focus();
+    }
+
+    function openOwnerModal() {
+      ownerModal.classList.add("open");
+    }
+
+    document.getElementById("btnOpenGold").addEventListener("click", openGoldModal);
+    document.getElementById("btnOwnerPanel").addEventListener("click", openOwnerModal);
+
+    [goldModal, ownerModal].forEach((m) => {
+      m.addEventListener("click", (e) => {
+        if (e.target === m) m.classList.remove("open");
+      });
+    });
+
+    document.getElementById("btnConfirmGold").addEventListener("click", () => {
+      const user = usernameInput.value.trim() || "@dungle";
+      const plan = document.getElementById("planSelect").value;
+      addLog(`Dungle đã kích hoạt miễn phí <strong>${plan}</strong> cho <strong>${user}</strong> (Phí: 0đ).`);
+      alert(`Thành công! Tài khoản ${user} đã được kích hoạt ${plan} với giá 0đ.`);
+      usernameInput.value = "";
+      goldModal.classList.remove("open");
+    });
+
+    document.getElementById("btnSaveBanner").addEventListener("click", () => {
+      const val = document.getElementById("bannerInput").value.trim();
+      if (!val) {
+        alert("Vui lòng nhập nội dung thông báo!");
+        return;
+      }
+      document.getElementById("noticeBar").textContent = val;
+      document.getElementById("bannerInput").value = "";
+      addLog(`Dungle đã cập nhật thông báo: "${val}"`);
+      ownerModal.classList.remove("open");
+    });
+
+    document.getElementById("toolUnlockAll").addEventListener("click", () => {
+      addLog("Dungle đã bật chế độ mở khóa 100% tính năng miễn phí 0đ.");
+      alert("Đã mở khóa toàn bộ tính năng VIP trên trang web cho Dungle (0đ)!");
+      ownerModal.classList.remove("open");
+    });
+
+    document.getElementById("toolSpinNow").addEventListener("click", () => {
+      const rewards = ["Locket Gold Vĩnh Viễn (0đ)", "Full Bộ Khung VIP (0đ)", "Spotify Premium 1 Năm (0đ)", "Thẻ VIP Đặc Quyền Dungle"];
+      const picked = rewards[Math.floor(Math.random() * rewards.length)];
+      addLog(`Dungle quay miễn phí trúng: <strong>${picked}</strong>.`);
+      alert("Chúc mừng Dungle! Bạn nhận được: " + picked);
+    });
+
+    document.getElementById("toolFrameVip").addEventListener("click", () => {
+      addLog("Mở khóa toàn bộ khung VIP miễn phí 0đ cho Dungle.");
+      alert("Toàn bộ khung VIP đã mở khóa 0đ cho Dungle!");
+    });
+
+    document.getElementById("toolSpotifyVip").addEventListener("click", () => {
+      addLog("Kích hoạt gói Spotify Premium miễn phí 0đ cho Dungle.");
+      alert("Đã kích hoạt Spotify Premium 0đ cho Dungle!");
+    });
+
+    document.getElementById("btnCloseToast").addEventListener("click", () => {
+      document.getElementById("toastBox").style.display = "none";
+    });
+
+    document.getElementById("btnFrame").addEventListener("click", () => {
+      addLog("Dungle truy cập kho Khung VIP (Miễn phí 0đ).");
+      alert("Chào Dungle! Tất cả khung Free & VIP đã mở sẵn 0đ cho bạn.");
+    });
+
+    document.getElementById("btnVipCard").addEventListener("click", () => {
+      addLog("Tạo Thẻ Locket VIP mang tên chủ web Dungle (0đ).");
+      alert("Đã xuất Thẻ Locket VIP độc quyền của Dungle (0đ)!");
+    });
+
+    document.getElementById("btnSpotify").addEventListener("click", () => {
+      addLog("Dungle kích hoạt Spotify Premium (0đ).");
+      alert("Đã kích hoạt Spotify Premium miễn phí 0đ cho Dungle!");
+    });
+
+    document.getElementById("btnWheel").addEventListener("click", () => {
+      const rewards = ["Locket Gold Vĩnh Viễn", "Full Khung VIP", "Thẻ VIP Dungle", "Spotify Premium"];
+      const res = rewards[Math.floor(Math.random() * rewards.length)];
+      addLog(`Vòng quay miễn phí của Dungle -> Trúng: <strong>${res}</strong> (0đ).`);
+      alert("Chúc mừng Dungle trúng: " + res + " (0đ)!");
+    });
+
+    document.getElementById("btnZalo").addEventListener("click", () => {
+      addLog("Mở Nhóm Chat Zalo quản trị của Dungle.");
+      alert("Mở Nhóm Chat Zalo của chủ web Dungle.");
+    });
+
+    document.querySelectorAll("#bottomNav .tab-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#bottomNav .tab-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const tab = btn.dataset.tab;
+        if (tab === "locket") openGoldModal();
+        else if (tab === "me" || tab === "topup") openOwnerModal();
+        else if (tab === "spotify") {
+          addLog("Dungle mở mục Spotify Premium (0đ).");
+          alert("Mục Spotify Premium đã mở khóa 0đ cho Dungle!");
+        } else if (tab === "shop" || tab === "frame") {
+          addLog(`Dungle mở mục ${tab.toUpperCase()} — Toàn bộ vật phẩm 0đ.`);
+          alert("Toàn bộ vật phẩm trong mục này đều 0đ dành cho chủ web Dungle!");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
